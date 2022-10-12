@@ -1,0 +1,53 @@
+
+
+
+
+#text-edit{
+    padding-bottom: 50px;
+
+}
+#text-change1{
+    font-family: 'Visby';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 61px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+#text-change2
+{
+    font-family: 'Visby';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 61px;
+    color: #F76E0B;
+    margin-bottom: 20px;
+}
+.home-bottom-3{
+    height: 500px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.Img-addition{
+    display: flex;
+    justify-content: center;
+}
+
+.small-deets{
+    background-color:white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    float: center;
+    margin-left: 200px;
+}
+.sub-class{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 252px;
+    height: 273px;
+}
