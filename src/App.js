@@ -4,8 +4,10 @@ import Header from "./pages/common/components/Header";
 function App() {
   return (
     <div className="App">
-      {/* <Home /> */}
+      
       <Header />
+
+      <Home /> 
     </div>
   );
 }
