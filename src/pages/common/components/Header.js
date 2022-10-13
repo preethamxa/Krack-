@@ -1,123 +1,61 @@
-//import { useState } from "react";
-//import { useDispatch } from "react-redux";
-//import links from "../../../../data/linkData";
-//import useAuth from "../../../../hooks/useAuth";
-//import useSticky from "../../../../hooks/useSticky";
-//import { searchText } from "../../../../redux/features/coursesSlice";
-//import { useRouter } from 'next/router';
-// import LoginData from "../../data/LoginMenuData";
-//import LoginData from "../../../../data/LoginMenuData";
-//import Sidebar from "../../../../components/common/SideBar";
+// import { AppBar } from "@mui/material";
+import AppBar from "@material-ui/core/AppBar";
+import Container from "@material-ui/core/Container";
+import Button from "@material-ui/core/Button";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
+import krackLogo from "../../../img/header/Krack-Learn-Musical-Instruments-online.png";
 
-const Nav_bar = () => {
-   // // sticky
-   // const { headerSticky } = useSticky();
-   // // user
-   // const { user, logout } = useAuth();
-   // // searchValue
-   // const [searchValue, setSearchValue] = useState('');
-   // // dispatch
-   // const dispatch = useDispatch();
-   // // router
-   // const router = useRouter();
-   // // handle sidebar show
-   // const [show, setShow] = useState(false);
-   // // handle close
-   // const handleClose = () => setShow(false);
-   // // handle sidebar show
-   // const handleShow = () => setShow(true);
-   // // handleSubmit
-   // const handleSubmit = e => {
-   //    e.preventDefault();
-   //    if (!searchValue) {
+import React from "react";
+import { headerStyles } from "../style/main";
+import "../style/Head.css";
 
-   //    }
-   //    else {
-   //       dispatch(searchText(searchValue))
-   //       router.push('/search-courses')
-   //    }
-   // } 
-   return (
-      <>
-         <header>
-            <div className="header__area">
-               <div className={headerSticky ? "header__bottom header__sticky" : "header__bottom"} id="header-sticky" >
-                  <div className="container">
-                     <div className="row align-items-center">
-                        <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
-                           <div className="logo">
-                              <Link href="/">
-                                 <a>
-                                    <img src="assets/img/logo/kracklogo.png" alt="logo" />
-                                 </a>
-                              </Link>
-                           </div>
-                        </div>
-                        <div className="col-xxl-7 col-xl-7 col-lg-8 d-none d-lg-block">
-                           <div className="main-menu">
-                              <nav id="mobile-menu">
-                                 {/* <ul>
+export default function Header() {
+  const classes = headerStyles();
 
-                                    {!user?.email &&
-                                       links.map((link) => {
-                                          return <li key={link.id} className={link.submenu ? `has-dropdown` : ''}>
-                                             <Link href={`${link.url}`}><a >{link.name}</a></Link>
-                                             <ul className={link.submenu ? `submenu` : ''}>
-                                                {
-                                                   link?.submenu?.map((sub_menu, index) => {
-                                                      return <li key={sub_menu.id}>
-                                                         <Link href={`${sub_menu.url}`}><a >{sub_menu.name}</a></Link>
-                                                      </li>
-                                                   })
-                                                }
-                                             </ul>
-                                          </li>
-                                       })
-                                    }
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
-                                    {
-                                       user?.email &&
-                                       LoginData.map((link) => {
-                                          return <li key={link.id} className={link.submenu ? `has-dropdown` : ''}>
-                                             <Link href={`${link.url}`}><a >{link.name}</a></Link>
-                                             <ul className={link.submenu ? `submenu` : ''}>
-                                                {
-                                                   link?.submenu?.map((sub_menu, index) => {
-                                                      return <li key={sub_menu.id}>
-                                                         <Link href={`${sub_menu.url}`}><a >{sub_menu.name}</a></Link>
-                                                      </li>
-                                                   })
-                                                }
-                                             </ul>
-                                          </li>
-                                       })
-                                    }
-                                 </ul> */}
-                              </nav>
-                           </div>
-                        </div>
-                        <div className="col-xxl-3 col-xl-3 col-lg-2 col-md-6 col-6">
-                           <div className="header__bottom-right d-flex justify-content-end align-items-center pl-30">
-                              <div className="header__hamburger ml-50 d-xl-none">
-                                 <button type="button" onClick={handleShow} className="hamurger-btn">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                 </button>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <div>
+      <AppBar className={classes.appbar}>
+        <Container className={classes.container}>
+          <div>
+            <img src={krackLogo} style={{ width: 150 }} />
+          </div>
+          <div className={classes.desktopNavbar}>
+            <ul className={classes.list}>
+              <li className={classes.navItem}>All courses</li>
+              <li className={classes.navItem}>Notification</li>
+              <li className={classes.navItem}>Tools</li>
+              <li className={classes.navItem}>Live</li>
+            </ul>
+          </div>
+          <div>
+            <Button className={classes.logincta}>Login in/Sign up</Button>
+            <div className={classes.mobileNavbar}>
+              <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                <MenuRoundedIcon style={{ color: "white", fontSize: "2rem" }} />
+              </Button>
+
+              <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
+                <MenuItem onClick={handleClose}>All courses</MenuItem>
+                <MenuItem onClick={handleClose}>Notification</MenuItem>
+                <MenuItem onClick={handleClose}>Tools</MenuItem>
+                <MenuItem onClick={handleClose}>Live</MenuItem>
+              </Menu>
             </div>
-       
-         </header>
-
-
-         <Sidebar show={show} handleClose={handleClose} />
-      </>
-   );
-};
-
-export default Nav_bar;
+          </div>
+        </Container>
+      </AppBar>
+    </div>
+  );
+}
