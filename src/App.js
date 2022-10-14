@@ -4,16 +4,16 @@ import Header from "./pages/common/components/Header";
 import Footer from "./pages/common/components/Footer";
 // import "./pages/home/style/homepage.css";
 // import Carousal from "./pages/common/components/Carousal";
-// import HomeMasonry from "./pages/home/components/HomeMasonry";
+import HomeMasonry from "./pages/home/components/HomeMasonry";
 
 function App() {
   return (
     <div className="App">
       
       <Header />
-
+      <HomeMasonry />
       <Home /> 
-    
+  
               <Footer/>
     </div>
   );
