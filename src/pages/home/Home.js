@@ -6,12 +6,13 @@ import Appdownload from "./components/Appdownload.js";
 //import HomeSlider from'./components/HomeSlider.js';
 //import Introcards from './components/Introcards.js';
 //import Nav_bar from './../common/components/Header.js';
-//import Footer from './../common/components/Footer.js';
+//import Footer from  "./../common/components/Footer.js";
 
 export default function Home() {
   return (
     <>
       <Appdownload />
+  
     </>
   );
 }

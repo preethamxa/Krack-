@@ -6,7 +6,6 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import krackLogo from "../../../img/header/Krack-Learn-Musical-Instruments-online.png";
-
 import React from "react";
 import { headerStyles } from "../style/main";
 import "../style/Head.css";
