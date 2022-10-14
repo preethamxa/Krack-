@@ -5,8 +5,8 @@ import "../style/homepage.css";
 const Cta = () => {
    return (
       <>
-         <img id="desktop" loading="lazy" src={App_download} class="img-fluid" alt="Responsive image"></img>
-         <img id="mobile" loading="lazy" src={App_download_mobile} class="img-fluid" alt="Responsive mobile-image"></img>
+         <img id="desktop-only" loading="lazy" src={App_download} class="img-fluid" alt="Responsive image"></img>
+         <img id="mobile-only" loading="lazy" src={App_download_mobile} class="img-fluid" alt="Responsive mobile-image"></img>
          <script>
             
          </script>
