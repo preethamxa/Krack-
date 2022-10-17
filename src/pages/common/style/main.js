@@ -3,7 +3,26 @@ import { makeStyles } from "@material-ui/core/styles";
 export const headerStyles = makeStyles((theme) => ({
   appbar: {
     background: "#1B1B1B !important",
+    [theme.breakpoints.down("md")]: {
+      padding: "1rem 0px 1rem 1rem",
+    },
     padding: "1rem",
+  },
+
+  container: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+
+  logoContainer: {
+    alignSelf: "center",
+  },
+
+  logo: {
+    [theme.breakpoints.down("md")]: {
+      width: 100,
+    },
+    width: 150,
   },
 
   logincta: {
@@ -11,12 +30,27 @@ export const headerStyles = makeStyles((theme) => ({
     borderRadius: 0,
     textTransform: "none",
     color: "white",
+    fontWeight: "bold",
+  },
+
+  btnRoot: {
+    padding: "0px !important",
+  },
+
+  shoppingCartContainer: {
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
+    display: "grid",
+    placeContent: "center",
+    marginLeft: "1rem",
   },
 
   container: {
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
+    paddingRight: "0px !important",
   },
 
   desktopNavbar: {
@@ -26,11 +60,10 @@ export const headerStyles = makeStyles((theme) => ({
   },
 
   mobileNavbar: {
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       display: "none",
     },
     display: "inline",
-    marginLeft: "16px",
   },
 
   list: {
@@ -40,6 +73,11 @@ export const headerStyles = makeStyles((theme) => ({
   },
 
   navItem: {
-    marginLeft: "1rem",
+    marginLeft: "1.5rem",
+  },
+
+  navItemBtn: {
+    textTransform: "capitalize",
+    color: "white",
   },
 }));

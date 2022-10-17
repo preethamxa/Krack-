@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "../style/mansory.css";
 import Guitar from "../../../img/home/HomeMasonry/grid1Guitar.png";
 import Singing from "../../../img/home/HomeMasonry/singing.png";
@@ -12,30 +12,28 @@ import Dance from "../../../img/home/HomeMasonry/danceee2.png";
 import Reels from "../../../img/home/HomeMasonry/reels4.png";
 import Darbuka from "../../../img/home/HomeMasonry/darbuka3.png";
 import Monopod from "../../../img/home/HomeMasonry/monopod4.png";
-import "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
 export default function Masonry() {
   return (
-    <div class="row"> 
-        <div class="column">
-      <img src={Guitar}/>
-      <img src={ Singing} />
-      <img src={Cajon} />
-      <img src={Homestudio} />
+    <div class="row">
+      <div class="column">
+        <img src={Guitar} />
+        <img src={Singing} />
+        <img src={Cajon} />
+        <img src={Homestudio} />
+      </div>
+      <div class="column">
+        <img src={Podcast} />
+        <img src={Ukulele} />
+        <img src={Kidpiano} />
+        <img src={HindiGuitar} />
+      </div>
+      <div class="column">
+        <img src={Dance} />
+        <img src={Reels} />
+        <img src={Darbuka} />
+        <img src={Monopod} />
+      </div>
     </div>
-    <div class="column">
-      <img src={Podcast} />
-      <img src={Ukulele} />
-      <img src={Kidpiano} />
-      <img src={HindiGuitar} />
-    </div>  
-    <div class="column">
-      <img src={Dance}/>
-      <img src={Reels} />
-      <img src={Darbuka} />
-      <img src={Monopod} />
-    </div>
-  
-  </div>
   );
 }
