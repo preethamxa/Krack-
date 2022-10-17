@@ -17,22 +17,22 @@ export default function Masonry() {
   return (
     <div class="row">
       <div class="column">
-        <img src={Guitar} />
-        <img src={Singing} />
-        <img src={Cajon} />
-        <img src={Homestudio} />
+        <img src={Guitar} alt="Guitar course" />
+        <img src={Singing}  alt="Singing Course" />
+        <img src={Cajon} alt="Cajon course"  />
+        <img src={Homestudio}  alt="Homestudio course" />
       </div>
       <div class="column">
-        <img src={Podcast} />
-        <img src={Ukulele} />
-        <img src={Kidpiano} />
-        <img src={HindiGuitar} />
+        <img src={Podcast}  alt="Podcast course" />
+        <img src={Ukulele} alt="Ukulele course"  />
+        <img src={Kidpiano} alt="Kidpiano course"  />
+        <img src={HindiGuitar} alt="HindiGuitar course" />
       </div>
       <div class="column">
-        <img src={Dance} />
-        <img src={Reels} />
-        <img src={Darbuka} />
-        <img src={Monopod} />
+        <img src={Dance} alt="Dance course" />
+        <img src={Reels} alt="Reels course" />
+        <img src={Darbuka} alt="Darbuka course" />
+        <img src={Monopod} alt="Monopod course" />
       </div>
     </div>
   );

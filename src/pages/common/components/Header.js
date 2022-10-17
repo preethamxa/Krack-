@@ -33,7 +33,7 @@ export default function Header() {
           <div className={classes.desktopNavbar}>
             <ul className={classes.list}>
               <li className={classes.navItem}>
-                <Button className={classes.navItemBtn}>All courses</Button>
+                <Button className={classes.navItemBtn} >All courses</Button>
               </li>
               <li className={classes.navItem}>
                 <Button className={classes.navItemBtn}>Notification</Button>

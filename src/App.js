@@ -8,14 +8,17 @@ import HomeMasonry from "./pages/home/components/HomeMasonry";
 import { BrowserRouter, Routes } from "react-router-dom";
 import DefinedRoutes from "./Routing/DefinedRoutes";
 
+
 function App() {
   return (
     <div className="App">
       <Header />
+   
       <BrowserRouter>
         <DefinedRoutes />
       </BrowserRouter>
-      <HomeMasonry/>
+    
+   
       <Footer />
     </div>
   );
