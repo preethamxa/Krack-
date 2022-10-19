@@ -18,7 +18,7 @@ export default function Masonry() {
     <div class="row">
       <div class="column">
         <img src={Guitar} alt="Guitar course" />
-        <img src={Singing}  alt="Singing Course" />
+        <img src={Singing} alt="Singing Course" />
         <img src={Cajon} alt="Cajon course"  />
         <img src={Homestudio}  alt="Homestudio course" />
       </div>
