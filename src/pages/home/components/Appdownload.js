@@ -2,17 +2,19 @@ import React from "react";
 import App_download from "../../../img/home/Appdownload/App-coming-soon.png";
 import App_download_mobile from "../../../img/home/Appdownload/App-coming-soon-mobile.png";
 import "../style/homepage.css";
-const Cta = () => {
-   return (
-      <>
-         <img class="desktop-only" loading="lazy" src={App_download}  alt="Responsive image"></img>
-         <img class="mobile-only" loading="lazy" src={App_download_mobile}  alt="Responsive mobile-image"></img>
-         <script>
-            
-         </script>
-      </>
-   );
-   };
+// import SimpleImageSlider from "react-simple-image-slider";
+const images = [{ url: "../../../img/home/Appdownload/App-coming-soon.png" }];
 
-export default Cta
+const App = () => {
+  return (
+    <div class="rsis-container">
+      {/* <SimpleImageSlider
+            width={1400}
+            height={501}
+            images={images}
+          /> */}
+    </div>
+  );
+};
 
+export default App;

@@ -13,27 +13,30 @@ import Reels from "../../../img/home/HomeMasonry/reels4.png";
 import Darbuka from "../../../img/home/HomeMasonry/darbuka3.png";
 import Monopod from "../../../img/home/HomeMasonry/monopod4.png";
 import "bootstrap/dist/css/bootstrap.css";
-export default function Masonry() {
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { Typography} from "@material-ui/core";
+import { Link } from "react-router-dom";
+export default function HomeMasonry() {
   return (
-    <div class="row">
-      <div class="column">
-        <img src={Guitar} alt="Guitar course" />
-        <img src={Singing} alt="Singing Course" />
-        <img src={Cajon} alt="Cajon course"  />
-        <img src={Homestudio}  alt="Homestudio course" />
-      </div>
-      <div class="column">
-        <img src={Podcast}  alt="Podcast course" />
-        <img src={Ukulele} alt="Ukulele course"  />
-        <img src={Kidpiano} alt="Kidpiano course"  />
-        <img src={HindiGuitar} alt="HindiGuitar course" />
-      </div>
-      <div class="column">
-        <img src={Dance} alt="Dance course" />
-        <img src={Reels} alt="Reels course" />
-        <img src={Darbuka} alt="Darbuka course" />
-        <img src={Monopod} alt="Monopod course" />
-      </div>
+    <div>
+      {" "}
+      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <Masonry>
+          <img src={Guitar} style={{ margin: 2 }} alt="Guitar"/>
+          <img src={Podcast} style={{ margin: 2 }} alt="Podcast"/>
+          <img src={Dance} style={{ margin: 2 }} alt="Dance" />
+          <img src={Singing} style={{ margin: 2 }} alt="Singing"/>
+          <img src={Ukulele} style={{ margin: 2 }} alt="Ukulele"/>
+          <img src={Reels} style={{ margin: 2 }} alt="Reels"/>
+          <img src={Cajon} style={{ margin: 2 }} alt="Cajon"/>
+          <img src={Kidpiano} style={{ margin: 2 }} alt="Kidpiano"/>
+          <img src={Darbuka} style={{ margin: 2 }} alt="Darbuka"/>
+          <img src={Homestudio} style={{ margin: 2 }} alt="Homestudio"/>
+          <img src={HindiGuitar} style={{ margin: 2 }} alt="HindiGuitar"/>
+          <img src={Monopod} style={{ margin: 2 }} alt="Monopod"/>
+        </Masonry>
+      </ResponsiveMasonry>
+      <Typography align="center"><Link to="#">See More &gt;&gt;</Link></Typography>
     </div>
   );
 }

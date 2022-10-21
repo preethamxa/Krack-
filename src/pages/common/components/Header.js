@@ -9,6 +9,8 @@ import krackLogo from "../../../img/header/Krack-Learn-Musical-Instruments-onlin
 import React from "react";
 import { headerStyles } from "../style/main";
 import "../style/Head.css";
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 export default function Header() {
   const classes = headerStyles();

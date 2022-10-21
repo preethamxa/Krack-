@@ -1,25 +1,52 @@
 import React from "react";
 import "./style/homepage.css";
 import "./style/mansory.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Appdownload from "./components/Appdownload.js";
-//import HomeCarousel from'./components/HomeCarousel.js';
-import HomeMasonry from './components/HomeMasonry.js';
-//import HomeSlider from'./components/HomeSlider.js';
- import Introcards from './components/Introcards.js';
-//import Nav_bar from './../common/components/Header.js';
-//import Footer from  "./../common/components/Footer.js";
-
+import HomeMasonry from "./components/HomeMasonry.js";
+import Introcards from "./components/Introcards.js";
+import HomeCarousel from "./components/HomeCarousel";
+import CourseCarousel from "./components/CourseCarousel";
 
 export default function Home() {
   return (
-    <>
-    <Introcards/>
+    <div style={{ marginTop: "3rem" }}>
+      <HomeCarousel />
+      <Introcards />
 
-      <HomeMasonry/>
-      <Appdownload />
-     
-   
-    </>
+      <div
+        style={{
+          textAlign: "center",
+          margin: "2rem 0px 4rem 0px",
+        }}
+      >
+        <h3
+          style={{
+            fontSize: "1.8rem",
+          }}
+        >
+          Courses
+        </h3>
+        <p
+          style={{
+            color: "grey",
+            fontSize: "1.2rem",
+          }}
+        >
+          12 unique courses, one platform. All that<br/> you need, krack has it guaranteed.
+        </p>
+      </div>
+
+      <HomeMasonry />
+      <div
+        style={{
+          margin: "2rem",
+        }}
+      >
+        <CourseCarousel  />
+      </div>
+      <Appdownload  />
+    
+    </div>
   );
 }

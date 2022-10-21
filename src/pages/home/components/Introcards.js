@@ -5,12 +5,12 @@ import KrackedUkulele from "../../../img/home/Introcards/KrackedUkulele.png";
 import KrackedGuitar from "../../../img/home/Introcards/KrackedGuitar.png";
 import UserSignup from "../../../img/home/Introcards/UserSignup.png";
 import DailyUsers from "../../../img/home/Introcards/DailyUsers.png";
-const CounterCards = () => {
+const Introcards = () => {
   const paperStyle = {
     padding: 20,
-    height: 273,
-    // width: 252,
-    margin: "20px auto",
+    height: 350,
+    width: 290,
+    margin: "100px auto",
     backgroundColor: "black",
     color: "#E27C19",
   };
@@ -22,13 +22,13 @@ const CounterCards = () => {
           <Paper elevation={10} style={paperStyle}>
             <div>
               <img src={KrackedUkulele} alt="icon" style={{ display: "block", marginLeft: "auto", marginRight: "auto" }} />
-              <Typography align="center" style={{color: "white", fontWeight: '900', fontSize: 30}}><CountUp
+              <Typography align="center" style={{color: "white", fontWeight: '500', fontSize: 32}}><CountUp
                 end={18260}
                 duration={5}
                 separator=","
                 suffix="+"
               /></Typography>
-              <Typography align="center" style={{fontWeight: '900', fontSize: 20}}>Kracked Ukulele</Typography>
+              <Typography align="center" style={{fontWeight: '500', fontSize: 24}}>Kracked<br/> Ukulele</Typography>
             </div>
           </Paper>
         </Grid>
@@ -36,13 +36,13 @@ const CounterCards = () => {
           <Paper elevation={10} style={paperStyle}>
             <div>
               <img src={KrackedGuitar} alt="icon" style={{ display: "block", marginLeft: "auto", marginRight: "auto" }} />
-              <Typography align="center" style={{color: "white",fontWeight: '900', fontSize: 30}}><CountUp
+              <Typography align="center" style={{color: "white",fontWeight: '500', fontSize: 32}}><CountUp
                 end={7000}
                 duration={5}
                 separator=","
                 suffix="+"
               /></Typography>
-              <Typography align="center" style={{fontWeight: '900', fontSize: 20 }}>Kracked Guitar</Typography>
+              <Typography align="center" style={{fontWeight: '500', fontSize: 24 }}>Kracked<br/> Guitar</Typography>
             </div>
           </Paper>
         </Grid>
@@ -51,13 +51,13 @@ const CounterCards = () => {
           <Paper elevation={10} style={paperStyle}>
             <div>
               <img src={UserSignup} alt="icon" style={{ display: "block", marginLeft: "auto", marginRight: "auto" }} />
-              <Typography align="center" style={{color: "white", fontWeight: '900', fontSize: 30}}><CountUp
+              <Typography align="center" style={{color: "white", fontWeight: '500', fontSize: 32}}><CountUp
                 end={36620}
                 duration={5}
                 separator=","
                 suffix="+"
               /></Typography>
-              <Typography align="center" style={{ fontWeight: '900', fontSize: 20 }}>User Signup</Typography>
+              <Typography align="center" style={{ fontWeight: '500', fontSize: 24 }}>User <br/>Signup</Typography>
             </div>
           </Paper>
         </Grid>
@@ -66,13 +66,13 @@ const CounterCards = () => {
           <Paper elevation={10} style={paperStyle}>
             <div>
               <img src={DailyUsers} alt="icon" style={{ display: "block", marginLeft: "auto", marginRight: "auto"}}/>
-              <Typography align="center" style={{color: "white", fontWeight: '900', fontSize: 30}}><CountUp
+              <Typography align="center" style={{color: "white", fontWeight: '500', fontSize: 32}}><CountUp
                 end={6600}
                 duration={5}
                 separator=","
                 suffix="+"
               /></Typography>
-              <Typography align="center" style={{ fontWeight: '900', fontSize: 20 }}>Daily Users</Typography>
+              <Typography align="center" style={{ fontWeight: '500', fontSize: 24 }}>Daily<br/> Users</Typography>
             </div>
           </Paper>
         </Grid>
@@ -82,4 +82,4 @@ const CounterCards = () => {
   );
 };
 
-export default CounterCards;
+export default Introcards;

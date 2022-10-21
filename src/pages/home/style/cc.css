@@ -1,0 +1,30 @@
+
+/* Course Carousel */
+#text-edit{
+    padding-bottom: 50px;
+
+}
+#text-change1{
+    font-family: 'Visby';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 61px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+#text-change2
+{
+    font-family: 'Visby';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 61px;
+    color: #F76E0B;
+    margin-bottom: 20px;
+}
+.home-bottom-3{
+    height: 350px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
