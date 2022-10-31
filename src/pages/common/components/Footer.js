@@ -28,7 +28,7 @@ const Footer = () =>
                 </Grid>
                 <Grid item xs={12} sm={3} md={4}>
                     <Typography  style={{paddingTop: 50, color:"white"}}><h2>About us</h2></Typography>
-                    <Typography  style={{ paddingTop: 10, paddingBottom:5}}><Link to="#" style={{color:"white"}}>Tune your instrument</Link></Typography>
+                    <Typography  style={{ paddingTop: 10, paddingBottom:5}}><Link to="#" style={{color:"white"}}>Tune your Instrument</Link></Typography>
                     <Typography  style={{ paddingTop: 10, paddingBottom:5}}><Link to="#" style={{color:"white"}}>Contact</Link></Typography>
                     <Typography  style={{ paddingTop: 10, paddingBottom:5}}><Link to="#" style={{color:"white"}}>Privacy Policy</Link></Typography>
                     <Typography  style={{ paddingTop: 10, paddingBottom:5}}><Link to="#" style={{color:"white"}}>Terms & Condition</Link></Typography>

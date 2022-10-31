@@ -7,12 +7,16 @@ import HomeMasonry from "./components/HomeMasonry.js";
 import Introcards from "./components/Introcards.js";
 import HomeCarousel from "./components/HomeCarousel";
 import CourseCarousel from "./components/CourseCarousel";
+import { homeStyles } from "./style/main";
 
 export default function Home() {
+  const classes = homeStyles();
   return (
     <div style={{ marginTop: "3rem" }}>
       <HomeCarousel />
-      <Introcards />
+      <div className={classes.introCardsContainer}>
+        <Introcards />
+      </div>
 
       <div
         style={{
@@ -33,7 +37,8 @@ export default function Home() {
             fontSize: "1.2rem",
           }}
         >
-          12 unique courses, one platform. All that<br/> you need, krack has it guaranteed.
+          12 unique courses, one platform. All that
+          <br /> you need, krack has it guaranteed.
         </p>
       </div>
 
@@ -43,9 +48,8 @@ export default function Home() {
           margin: "2rem",
         }}
       >
-        <CourseCarousel  />
+        <CourseCarousel />
       </div>
-      <Appdownload  />
     
     </div>
   );

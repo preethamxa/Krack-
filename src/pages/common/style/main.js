@@ -43,7 +43,7 @@ export const headerStyles = makeStyles((theme) => ({
     },
     display: "grid",
     placeContent: "center",
-    marginLeft: "1rem",
+    marginLeft: "2rem",
   },
 
   container: {

@@ -5,17 +5,13 @@ import Footer from "./pages/common/components/Footer";
 // import Carousal from "./pages/common/components/Carousal";
 import { BrowserRouter, Routes } from "react-router-dom";
 import DefinedRoutes from "./Routing/DefinedRoutes";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div className="App">
       <Header />
-     
-      <BrowserRouter>
-        <DefinedRoutes />
-      </BrowserRouter>
+      <DefinedRoutes />
       <Footer />
     </div>
   );

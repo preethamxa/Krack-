@@ -1,5 +1,4 @@
 import AppBar from "@material-ui/core/AppBar";
-import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -9,8 +8,7 @@ import krackLogo from "../../../img/header/Krack-Learn-Musical-Instruments-onlin
 import React from "react";
 import { headerStyles } from "../style/main";
 import "../style/Head.css";
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const classes = headerStyles();
@@ -30,12 +28,16 @@ export default function Header() {
       <AppBar className={classes.appbar}>
         <div className={classes.container}>
           <div className={classes.logoContainer}>
-            <img src={krackLogo} className={classes.logo} />
+            <Link to="/">
+              <img src={krackLogo} className={classes.logo} />
+            </Link>
           </div>
           <div className={classes.desktopNavbar}>
             <ul className={classes.list}>
               <li className={classes.navItem}>
-                <Button className={classes.navItemBtn}>All courses</Button>
+                <Link to="/allcourses" style={{ textDecoration: "none" }}>
+                  <Button className={classes.navItemBtn}>All courses</Button>
+                </Link>
               </li>
               <li className={classes.navItem}>
                 <Button className={classes.navItemBtn}>Notification</Button>
@@ -51,13 +53,22 @@ export default function Header() {
           <div
             style={{
               display: "flex",
+              alignItems: "center",
             }}
           >
-            <Button size="small" className={classes.logincta}>
-              Log in/Sign up
-            </Button>
+            <Link
+              to="/signin"
+              style={{
+                textDecoration: "none",
+              }}
+            >
+              <Button size="small" className={classes.logincta}>
+                Log in / Sign up
+              </Button>
+            </Link>
+
             <div className={classes.shoppingCartContainer}>
-              <ShoppingCartOutlinedIcon style={{ fontSize: "2rem" }} />
+              <ShoppingCartOutlinedIcon style={{ fontSize: "1.7rem" }} />
             </div>
             <div className={classes.mobileNavbar}>
               <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
@@ -66,7 +77,7 @@ export default function Header() {
 
               <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
                 <MenuItem onClick={handleClose}>MyAccount</MenuItem>
-                <MenuItem onClick={handleClose}>All Courses</MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/allcourses">All Courses</Link> </MenuItem>
                 <MenuItem onClick={handleClose}>Notifications</MenuItem>
                 <MenuItem onClick={handleClose}>Live</MenuItem>
               </Menu>
